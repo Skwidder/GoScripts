@@ -24,11 +24,13 @@ def RankConversion(rank):
         Leago Also uses this same conversion
     """
     # print("RANK: " + rank)
+    rank = round(rank)
+    
     if rank <= 29:
-        kyu_rank = round(30 - rank)
+        kyu_rank = 30 - rank
         return f"{kyu_rank}k"
     else:
-        dan_rank = round(rank - 29)
+        dan_rank = rank - 29
         return f"{dan_rank}d"
 
 
